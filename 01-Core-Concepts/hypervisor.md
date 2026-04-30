@@ -1,0 +1,65 @@
+# Hypervisor: The Virtualization Engine
+
+This document explains the hypervisor, the foundational software that enables modern cloud computing by bridging physical hardware and virtual infrastructure.
+
+---
+
+## 📌 Big Picture Flow
+
+**Physical Server** → **Hypervisor (The Manager)** → **Virtual Machines (VMs)**
+
+---
+
+## 1. What is a Hypervisor?
+
+*   **Simple Definition**: A hypervisor is a software layer that allows multiple virtual machines to run on a single physical server.
+*   **Professional Definition**: Also known as a **Virtual Machine Monitor (VMM)**, a hypervisor is a software layer that abstracts and manages physical hardware resources—such as CPU, storage, and networking—enabling multiple isolated virtual machines (VMs) to operate on a single physical machine].
+
+---
+
+## 2. Why a Hypervisor is Needed
+
+Before virtualization, a "One Server, One OS" model led to massive hardware underutilization. 
+With a hypervisor:
+*   **Resource Sharing**: One physical server can run multiple independent virtual machines.
+*   **Hardware Abstraction**: It serves as an intermediary, allocating dedicated resources to VMs as needed.
+*   **Independence**: Each VM operates in an isolated environment, unaware it is sharing underlying hardware.
+
+---
+
+## 3. Types of Hypervisors
+
+Hypervisors are categorized by where they sit in the technical stack.
+
+### 🔹 Type 1: Bare Metal
+*   **Definition**: Runs directly on the physical hardware without a host operating system.
+*   **Characteristics**: Offers high efficiency, reliability, and stronger security because it avoids the overhead of a general-purpose OS.
+*   **Use Case**: Standard for enterprise data centers and cloud platforms.
+*   **Examples**: VMware ESXi, Microsoft Hyper-V, and **KVM**.
+
+### 🔹 Type 2: Hosted
+*   **Definition**: Runs as an application on top of an existing Operating System (e.g., Windows or macOS).
+*   **Characteristics**: Easier to install and user-friendly, but generally less efficient due to the "Host OS" layer.
+*   **Use Case**: Software development, testing different OS environments, and personal use.
+*   **Examples**: Oracle VirtualBox, VMware Workstation.
+
+---
+
+## 4. Hypervisor in Google Cloud (GCP Context)
+
+In Google Cloud Platform (GCP):
+*   **Compute Engine**: Google's IaaS product offers VMs powered by a **security-hardened, KVM-based hypervisor**.
+*   **Behind the Scenes**: Users do not directly manage the hypervisor; it works transparently to provide on-demand virtual infrastructure.
+
+---
+
+### 🖼️ Conceptual Overview: Hypervisor Architecture
+
+The following diagram illustrates the structural difference between Bare Metal (Type 1) and Hosted (Type 2) hypervisors.
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/62929465-87dc-4a4a-8d18-dc6d99bc4f83" />
+
+---
+
+## 🧠 Key Insight
+
+Without hypervisors, cloud computing would not exist. They are the essential bridge that allows physical hardware to be "rented" out as flexible, virtual, and isolated infrastructure.
