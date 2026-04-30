@@ -64,7 +64,7 @@ Virtualization is the **foundation of cloud computing**. It enables the three pi
 
 The following diagram illustrates the layer of abstraction (The Hypervisor) that allows for dynamic resource allocation and the apartment-style isolation of workloads.
 
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/41795efa-1bb0-4b15-b18a-85224d42fe43" />
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/7742464a-5a2f-434c-8bfe-d4da739e396c" />
 
 ---
 
